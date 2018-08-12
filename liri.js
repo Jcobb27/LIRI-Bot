@@ -48,6 +48,11 @@ function myTweets() {
 //if action = spotify-this-song, call the spotify function
 if (action === "spotify-this-song") {
 
+    //if user doesn't put in a song, use The Sign
+    if (nodeArgs.length < 4) {
+        songName = "The Sign";
+    }
+
     // Loop through all the words in the node argument
     // And do a for-loop to handle putting song names in a string
     for (var j = 3; j < nodeArgs.length; j++) {
